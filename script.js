@@ -88,7 +88,7 @@ const contagemRegressiva = () => {
         return;
     }
     tempoDecorridoEmSegundos -= 1;
-  mostrarTempo();
+    mostrarTempo();
 }
 
 PlayPauseBotao.addEventListener('click', iniciarOuPausar);
@@ -113,14 +113,14 @@ function zerar() {
 
 function trocarIcone() {
     if (começarOuPausarBotao.textContent === 'Começar') {
-        iconeComeçaePause.src = 'imagens/play_arrow.png'; 
+        iconeComeçaePause.src = 'imagens/play_arrow.png';
     } else {
-        iconeComeçaePause.src = 'imagens/pause.png'; 
+        iconeComeçaePause.src = 'imagens/pause.png';
     }
 }
 function mostrarTempo(params) {
-    const tempo = new Date(tempoDecorridoEmSegundos * 1000  );
-    const tempoFormatado = tempo.toLocaleTimeString('pt-BR', {minute: '2-digit', second: '2-digit'});
+    const tempo = new Date(tempoDecorridoEmSegundos * 1000);
+    const tempoFormatado = tempo.toLocaleTimeString('pt-BR', { minute: '2-digit', second: '2-digit' });
     tempoNatela.innerHTML = `${tempoFormatado}`
 }
 mostrarTempo();
